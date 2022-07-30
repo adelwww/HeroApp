@@ -1,6 +1,6 @@
 package com.example.heroapp.data.repositories
 
-import com.example.heroapp.base.BaseRepository
+import com.example.heroapp.data.repositories.base.BaseRepository
 import com.example.heroapp.data.remote.apiservices.HeroApiService
 import javax.inject.Inject
 
@@ -10,5 +10,9 @@ class HeroRepository @Inject constructor(
 
     fun fetchHeroes() = doRequest {
         service.fetchHeroes()
+    }
+
+    fun fetchIdHeroes(id: Int) = doRequest {
+        service.fetchIdHeroes(id)
     }
 }

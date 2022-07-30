@@ -11,7 +11,28 @@ data class HeroModel(
     @SerializedName("name")
     var name: String,
 
-    @SerializedName("attack_type")
-    var attackType: String
+    @SerializedName("duration")
+    val duration: Int,
+
+    @SerializedName("start_time")
+    val startTime: Int,
+
+    @SerializedName("radiant_name")
+    val radiantName: String,
+
+    @SerializedName("dire_name")
+    val direName: String,
+
+    @SerializedName("league_name")
+    val leagueName: String,
+
+    @SerializedName("series_type")
+    val seriesType: Int,
+
+    @SerializedName("radiant_score")
+    val radiantScore: Int,
+
+    @SerializedName("dire_score")
+    val direScore: Int
 
 ) : IBaseDiffModel

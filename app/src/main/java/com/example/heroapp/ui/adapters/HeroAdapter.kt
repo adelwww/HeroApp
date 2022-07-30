@@ -8,9 +8,8 @@ import com.example.heroapp.base.BaseDiffUtilItemCallback
 import com.example.heroapp.data.remote.models.HeroModel
 import com.example.heroapp.databinding.ItemHeroBinding
 
-class HeroAdapter : ListAdapter<HeroModel, HeroAdapter.HeroViewHolder>(
-    BaseDiffUtilItemCallback()
-) {
+class HeroAdapter(private val onItemClick: (id: Int) -> Unit)
+    : ListAdapter<HeroModel, HeroAdapter.HeroViewHolder>(BaseDiffUtilItemCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HeroViewHolder {
         return HeroViewHolder(
@@ -29,6 +28,10 @@ class HeroAdapter : ListAdapter<HeroModel, HeroAdapter.HeroViewHolder>(
     ) : RecyclerView.ViewHolder(binding.root){
         fun onBind(model: HeroModel) = with(binding) {
             nameTv.text = model.name
+
+            heroCv.setOnClickListener {
+                onItemClick(model.id)
+            }
         }
     }
 }

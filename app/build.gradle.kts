@@ -9,6 +9,9 @@ plugins {
     //hilt
     id("dagger.hilt.android.plugin")
 
+    // Navigation SafeArgs
+    id("androidx.navigation.safeargs")
+
 }
 
 android {
@@ -48,7 +51,7 @@ android {
 dependencies {
 
     //Core
-    implementation("androidx.core:core-ktx:1.7.0")
+    implementation("androidx.core:core-ktx:1.8.0")
 
     //AppCompat
     implementation("androidx.appcompat:appcompat:1.4.2")
@@ -89,7 +92,7 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor")
 
     // Hilt
-    implementation("com.google.dagger:hilt-android:2.40")
+    implementation("com.google.dagger:hilt-android:2.41")
     kapt("com.google.dagger:hilt-android-compiler:2.40")
 
     // Lifecycle
@@ -98,13 +101,13 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version")
 
     // | for ViewModel
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+    implementation( "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
 
     //Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0-RC3")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0-RC")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1")
 
 
 }

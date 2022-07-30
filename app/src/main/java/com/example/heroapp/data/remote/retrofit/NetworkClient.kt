@@ -11,7 +11,7 @@ class NetworkClient @Inject constructor(
 
     private val provideRetrofit = retrofitClient.provideRetrofit(okHttp.provideOkHttpClient())
 
-    fun provideHeroesApiService(): HeroApiService =provideRetrofit.create()
+    fun provideHeroesApiService() = provideRetrofit.create(HeroApiService::class.java)
 
 
 }

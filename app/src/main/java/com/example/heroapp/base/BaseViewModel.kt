@@ -11,19 +11,4 @@ import kotlinx.coroutines.launch
 
 abstract class BaseViewModel : ViewModel() {
 
-    protected fun <T> mutableUIStateFlow() = MutableStateFlow<UIState<T>>(UIState.Idle())
-
-    protected fun <T> Flow<Either<String, T>>.collectRequest(
-        state: MutableStateFlow<UIState<T>>,
-    ) {
-        viewModelScope.launch(Dispatchers.IO) {
-            state.value = UIState.Loading()
-            this@collectRequest.collect {
-                when (it) {
-                    is Either.Left -> state.value = UIState.Error(it.value)
-                    is Either.Right -> state.value = UIState.Success(it.value)
-                }
-            }
-        }
-    }
 }

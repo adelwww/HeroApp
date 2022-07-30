@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/HeroApp/app/src/main/res/drawable/oval.xml" value="0.2485" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/HeroApp/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/HeroApp/app/src/main/res/layout/fragment_detail_hero.xml" value="0.25" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/HeroApp/app/src/main/res/layout/fragment_hero.xml" value="0.25" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/HeroApp/app/src/main/res/layout/item_detail_hero.xml" value="0.2296195652173913" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/HeroApp/app/src/main/res/layout/item_hero.xml" value="0.25" />
       </map>
     </option>
